@@ -27,7 +27,7 @@ import java.util.*
 abstract class BaseActivity : AppCompatActivity() {
 
 
-    fun showSnackBar(msg: String, @ColorRes colorId: Int = R.color.white) {
+    fun showSnackBar(msg: String, @ColorRes colorId: Int = R.color.black) {
         var snackBar = Snackbar.make(getRootView(), msg, Snackbar.LENGTH_LONG)
         snackBar.view.setBackgroundColor(ContextCompat.getColor(this, colorId))
         snackBar.show()
@@ -59,9 +59,6 @@ abstract class BaseActivity : AppCompatActivity() {
             imm.hideSoftInputFromWindow(activity.window.decorView.windowToken, 0)
         }
     }
-
-
-
     }
 
     // Extension function to enable and disable UI while loading

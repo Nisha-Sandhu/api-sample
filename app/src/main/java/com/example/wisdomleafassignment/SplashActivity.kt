@@ -3,6 +3,7 @@ package com.example.wisdomleafassignment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import com.example.wisdomleafassignment.listItems.view.TechnologiesActivity
 import kotlinx.coroutines.*
 
 class SplashActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.Default).launch {
             delay(SPLASH_TIME_OUT)
             withContext(Dispatchers.Main) {
-                MainActivity.startActivity(this@SplashActivity)
+                TechnologiesActivity.startActivity(this@SplashActivity)
             }
         }
     }
